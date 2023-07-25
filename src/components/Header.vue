@@ -1,13 +1,6 @@
 <template>
   <div class="head-container">
     <div class="logo">HackerNews</div>
-    <div class="item-container">
-      <input class="input-item" type="text" />
-      <button class="but">
-        <font-awesome-icon icon="fa-angle-down" />
-      </button>
-    </div>
-    <font-awesome-icon :icon="['fas', 'magnifying-glass']" />
   </div>
 </template>
 
@@ -15,4 +8,13 @@
 export default {};
 </script>
 
-<style></style>
+<style>
+.head-container {
+  margin: 10px 15px;
+  padding: 15px 15px;
+  background-color: orange;
+}
+.logo {
+  font-weight: 700;
+}
+</style>
