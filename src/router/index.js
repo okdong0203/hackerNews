@@ -6,8 +6,14 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    name: 'MainHome',
-    component: () => import('@/views/MainHome.vue'),
+    name: 'ListItem',
+    component: () => import('@/views/ListItemView.vue'),
+  },
+  {
+    path: '/users',
+    name: 'userInfoView',
+    component: () => import('@/views/UserInfoView.vue'),
+    props: route => ({ data: route.params.data }),
   },
 ];
 
