@@ -1,14 +1,14 @@
 <template>
-  <newsList></newsList>
+  <NewsList></NewsList>
 </template>
 
 <script>
-import newsList from '@/components/ListItem.vue';
+import NewsList from '@/components/ListItem.vue';
 
 export default {
   name: 'ListItemView',
   components: {
-    newsList,
+    NewsList,
   },
 };
 </script>

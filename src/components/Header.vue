@@ -1,12 +1,14 @@
 <template>
   <div class="head-container">
-    <div class="logo">HackerNews</div>
+    <div>
+      <router-link class="logo" to="/news">HackerNews</router-link>
+      <router-link class="logo" to="/ask">Ask</router-link>
+      <router-link class="logo" to="/jobs">Jobs</router-link>
+    </div>
   </div>
 </template>
 
-<script>
-export default {};
-</script>
+<script></script>
 
 <style>
 .head-container {
@@ -16,5 +18,6 @@ export default {};
 }
 .logo {
   font-weight: 700;
+  color: black;
 }
 </style>

@@ -1,6 +1,5 @@
 <template>
   <div class="base">
-    <Header></Header>
     <div class="border-box">
       <div class="content-box">
         <ul>
@@ -8,7 +7,7 @@
             <span class="rank">{{ (page - 1) * 30 + index + 1 }}. </span>
             <a class="url" :href="item.url">{{ item.title }} ({{ item.domain }})</a>
             <p class="sup-item">
-              {{ item.points }} points by <a class="userInfo" href="#" @click="clickUser(item.user)">{{ item.user }}</a> {{ item.time_ago }}
+              {{ item.points }} points by <a class="link-text" href="javacript:void(0)" @click="userInfo(item.user)">{{ item.user }}</a> {{ item.time_ago }}
               <span v-show="comments_check">| {{ item.comments_count }} comment</span>
             </p>
           </li>
@@ -24,14 +23,10 @@
 </template>
 
 <script>
-import Header from '@/components/Header.vue';
 import { newsList } from '@/api/index';
 
 export default {
   name: 'ListItem',
-  components: {
-    Header,
-  },
   data() {
     return {
       newsList: [],
@@ -51,12 +46,13 @@ export default {
     this.getNewsList('news/' + this.page + '.json');
   },
   methods: {
-    getNewsList(param) {
-      newsList(param)
+    async getNewsList(param) {
+      await newsList(param)
         .then(r => {
           this.newsList = r.data;
-          console.log(this.newsList);
+          // console.log(this.newsList);
           if (r.status === 200) {
+            this.$store.commit('startSpinner');
             for (let i = 0; i < this.newsList.length; i++) {
               this.newsList.comments_count = this.comments_count;
               this.newsList.title = this.title;
@@ -66,6 +62,7 @@ export default {
               this.newsList.user = this.user;
               this.comments_check = this.comments_count > 0 ? false : true;
             }
+            this.$store.commit('endSpinner');
           } else {
             alert('서버와 통신이 원할하지 않습니다. \n 다시 시도해주세요.');
           }
@@ -74,12 +71,8 @@ export default {
           alert('오류가 발생했습니다. 오류코드 =' + error);
         });
     },
-    clickUser(user) {
-      if (user) {
-        this.$router.push({ name: 'userInfoView', params: { data: user } });
-      } else {
-        alert('사용자의 정보가 없습니다.');
-      }
+    userInfo(user) {
+      this.$router.push({ name: 'UserInfoView', params: { id: user } });
     },
     moreList(page) {
       if (page === this.page) {
@@ -95,13 +88,6 @@ export default {
 </script>
 
 <style>
-.border-box {
-  background-color: #fff;
-  box-sizing: content-box;
-}
-.content-box {
-  padding: 30px;
-}
 .rank {
   color: #666666;
 }
@@ -122,6 +108,12 @@ export default {
 }
 .userInfo:hover {
   color: blue;
+}
+.link-text {
+  color: #d3d3d3;
+}
+.link-text:hover {
+  text-decoration: underline;
 }
 .btn-container {
   margin-top: 20px;
