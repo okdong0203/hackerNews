@@ -3,24 +3,34 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-const routes = [
-  {
-    path: '/',
-    name: 'ListItem',
-    component: () => import('@/views/ListItemView.vue'),
-  },
-  {
-    path: '/users',
-    name: 'userInfoView',
-    component: () => import('@/views/UserInfoView.vue'),
-    props: route => ({ data: route.params.data }),
-  },
-];
-
 const router = new VueRouter({
   mode: 'history',
-  base: process.env.BASE_URL,
-  routes,
+  routes: [
+    {
+      path: '/',
+      redirect: '/news',
+    },
+    {
+      path: '/news',
+      name: 'ListItem',
+      component: () => import('@/views/ListItemView.vue'),
+    },
+    {
+      path: '/users/:id',
+      name: 'UserInfoView',
+      component: () => import('@/views/UserInfoView.vue'),
+    },
+    {
+      path: '/ask',
+      name: 'AskView',
+      component: () => import('@/views/AskView.vue'),
+    },
+    {
+      path: '/jbos',
+      name: 'JobsView',
+      component: () => import('@/views/JobsView.vue'),
+    },
+  ],
 });
 
 export default router;
