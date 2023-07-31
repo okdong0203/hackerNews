@@ -5,7 +5,7 @@
 <script>
 import UserInfo from '@/components/UserInfo.vue';
 export default {
-  name: 'userInfoView',
+  name: 'UserInfoView',
   components: {
     UserInfo,
   },

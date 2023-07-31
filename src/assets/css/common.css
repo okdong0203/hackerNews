@@ -9,3 +9,17 @@ a {
 ul {
   list-style: none;
 }
+.border-box {
+  background-color: #fff;
+  box-sizing: content-box;
+}
+.content-box {
+  padding: 30px;
+}
+.container {
+  background-color: #fff;
+  display: flex;
+}
+.container-box {
+  padding-left: 10px;
+}
