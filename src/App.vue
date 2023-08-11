@@ -2,7 +2,7 @@
   <div id="app">
     <Header></Header>
     <router-view />
-    <Spinner :loading="loading" />
+    <Spinner :loading="$store.state.LoadingStatus" />
   </div>
 </template>
 <script>
@@ -13,11 +13,6 @@ export default {
   components: {
     Header,
     Spinner,
-  },
-  computed: {
-    loading() {
-      return this.$store.getters.getLoding;
-    },
   },
 };
 </script>
