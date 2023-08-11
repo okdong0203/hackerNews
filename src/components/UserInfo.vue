@@ -17,6 +17,7 @@
 
 <script>
 import { userInfo } from '@/api/index';
+
 export default {
   name: 'userInfo',
   data() {
@@ -32,19 +33,16 @@ export default {
       this.userId = this.$route.params.id;
       this.getUserInfo();
     }
-    // console.log(this.userId);
   },
   methods: {
     getUserInfo() {
       userInfo(this.userId).then(r => {
         // console.log(r);
         if (r.data) {
-          this.$store.commit('startSpinner');
           let userInfo = r.data;
           this.created = userInfo.created;
           this.id = userInfo.id;
           this.karma = userInfo.karma;
-          this.$store.commit('endSpinner');
         } else {
           alert('사용자의 정보가 없습니다.');
         }
