@@ -27,14 +27,14 @@ const router = new VueRouter({
       component: () => import('@/views/AskView.vue'),
     },
     {
-      path: '/jbos',
+      path: '/jobs',
       name: 'JobsView',
       component: () => import('@/views/JobsView.vue'),
     },
     {
       path: '/item/:id',
-      name: 'AskItemView',
-      component: () => import('@/views/AskItemView.vue'),
+      name: 'CommentList',
+      component: () => import('@/views/CommentList.vue'),
     },
   ],
 });
