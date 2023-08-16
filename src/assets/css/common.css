@@ -9,17 +9,22 @@ a {
 ul {
   list-style: none;
 }
-.border-box {
-  background-color: #fff;
-  box-sizing: content-box;
+.text-gray {
+  color: #757575;
 }
-.content-box {
-  padding: 30px;
+.mb20 {
+  margin-bottom: 20px;
 }
-.container {
-  background-color: #fff;
-  display: flex;
+.pb50 {
+  padding-bottom: 50px;
 }
-.container-box {
-  padding-left: 10px;
+.pt10 {
+  padding-top: 10px;
+}
+.fs12 {
+  font-size: 12px;
+}
+.base {
+  margin: 10px 15px;
+  background-color: #F6F6F6;
 }
