@@ -9,4 +9,13 @@ function newsList(param) {
 function userInfo(param) {
   return instance.get(`user/${param}/json`);
 }
-export { newsList, userInfo };
+function askList(param) {
+  return instance.get(param);
+}
+function askInfo(param) {
+  return instance.get(`item/${param}/json`);
+}
+function jobsList(param) {
+  return instance.get(param);
+}
+export { newsList, userInfo, askList, askInfo, jobsList };
