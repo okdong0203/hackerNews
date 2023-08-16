@@ -1,15 +1,15 @@
 <template>
   <div>
-    <JobsView></JobsView>
+    <Jobs></Jobs>
   </div>
 </template>
 
 <script>
-import JobsView from '@/components/Jobs.vue';
+import Jobs from '@/components/Jobs.vue';
 export default {
   name: 'JobsView',
   components: {
-    JobsView,
+    Jobs,
   },
 };
 </script>
