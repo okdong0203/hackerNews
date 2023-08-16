@@ -52,21 +52,4 @@ export default {
 };
 </script>
 
-<style>
-.fa-size {
-  padding-top: 40px;
-  font-size: 5.2rem;
-}
-.icon-box {
-  display: flex;
-  margin: 10px;
-  background-color: #fff;
-}
-.user-box {
-  padding-left: 25px;
-}
-.user-text {
-  margin-top: 0px;
-  margin-bottom: 10px;
-}
-</style>
+<style></style>
