@@ -27,11 +27,8 @@ export default {
     return {
       id: '',
       title: '',
-      timeAgo: '',
       content: '',
-      contentList: [],
       comments: [],
-      comments2: [],
     };
   },
   created() {

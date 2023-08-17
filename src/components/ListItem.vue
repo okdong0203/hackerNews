@@ -34,16 +34,7 @@ export default {
     return {
       newsList: [],
       comments_count: 0,
-      title: '',
-      domain: '',
-      time_ago: '',
-      type: '',
-      url: '',
-      user: '',
-      rank: 0,
       page: 1,
-      comments_check: true,
-      comments_list: [],
     };
   },
   created() {
@@ -55,7 +46,7 @@ export default {
         .then(r => {
           if (r.status === 200) {
             this.newsList = r.data;
-            console.log(this.newsList);
+            // console.log(this.newsList);
           } else {
             alert('서버와 통신이 원할하지 않습니다. \n 다시 시도해 주세요.');
           }
