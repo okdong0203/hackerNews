@@ -6,7 +6,7 @@ https://news.ycombinator.com/
 https://github.com/HackerNews/API
 
 #studying</br>
-<img src="https://img.shields.io/badge/Vue-#4FC08D?style=flat-square&logo=vuedotjs&logoColor=white"/>
+<img src="https://img.shields.io/badge/Vue-#4FC08D?style=flat-square&logo=Vue.js&logoColor=white"/>
 
 ### Project setup
 
