@@ -2,11 +2,11 @@
 
 ### HackerNews API
 
-$https://news.ycombinator.com/  
-$https://github.com/HackerNews/API
+https://news.ycombinator.com/  
+https://github.com/HackerNews/API
 
-#studying
-<img src="https://img.shields.io/badge/vuedotjs-#4FC08D?style=flat-square&logo=Vue&logoColor=white"/>
+#studying</br>
+<img src="https://img.shields.io/badge/Vue-#4FC08D?style=flat-square&logo=vuedotjs&logoColor=white"/>
 
 ### Project setup
 
