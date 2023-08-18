@@ -36,17 +36,21 @@ export default {
   },
   methods: {
     getUserInfo() {
-      userInfo(this.userId).then(r => {
-        // console.log(r);
-        if (r.data) {
-          let userInfo = r.data;
-          this.created = userInfo.created;
-          this.id = userInfo.id;
-          this.karma = userInfo.karma;
-        } else {
-          alert('사용자의 정보가 없습니다.');
-        }
-      });
+      userInfo(this.userId)
+        .then(r => {
+          // console.log(r);
+          if (r.data) {
+            let userInfo = r.data;
+            this.created = userInfo.created;
+            this.id = userInfo.id;
+            this.karma = userInfo.karma;
+          } else {
+            alert('사용자의 정보가 없습니다.');
+          }
+        })
+        .catch(error => {
+          console.log('오류내용: ' + error);
+        });
     },
   },
 };

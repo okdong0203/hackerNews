@@ -5,7 +5,6 @@
         <ul>
           <li v-for="(item, index) in askList" :key="index">
             <span class="rank">{{ (page - 1) * 30 + index + 1 }}. </span>
-            <!-- <router-link :to="`item/${item.id}`"></router-link> -->
             <a class="url" href="javasript:void(0)" @click="askItem(item.id)">{{ item.title }}</a>
             <p class="sup-item">
               {{ item.points }} points by <a class="link-text" href="javacript:void(0)" @click="userInfo(item.user)">{{ item.user }}</a> {{ item.time_ago }} |
@@ -33,7 +32,6 @@ export default {
     return {
       askList: [],
       page: 1,
-      comments_check: false,
     };
   },
   methods: {
@@ -42,7 +40,7 @@ export default {
         .then(r => {
           if (r.status === 200) {
             this.askList = r.data;
-            console.log(this.askList);
+            // console.log(this.askList);
           } else {
             alert('서버와 통신이 월할하지 않습니다. \n 다시 시도해 주세요.');
           }

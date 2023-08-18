@@ -7,11 +7,9 @@
             <span class="rank">{{ (page - 1) * 30 + index + 1 }}. </span>
             <a class="url" :href="item.url"
               >{{ item.title }}
-              <p class="urlC">({{ item.domain }})</p></a
-            >
-            <p class="sup-item">
-              {{ item.time_ago }}
-            </p>
+              <p class="urlC">({{ item.domain }})</p>
+            </a>
+            <p class="sup-item">{{ item.time_ago }}</p>
           </li>
         </ul>
         <div class="btn-container">

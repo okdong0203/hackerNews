@@ -7,8 +7,8 @@
             <span class="rank">{{ (page - 1) * 30 + index + 1 }}. </span>
             <a class="url" :href="item.url"
               >{{ item.title }}
-              <p class="urlC">({{ item.domain }})</p></a
-            >
+              <p class="urlC">({{ item.domain }})</p>
+            </a>
             <p class="sup-item">
               {{ item.points }} points by <a class="link-text" href="javacript:void(0)" @click="userInfo(item.user)">{{ item.user }}</a> {{ item.time_ago }} |
               <span class="user" v-show="item.comments_count !== 0" @click="comment(item.id)"> {{ item.comments_count }} comment</span>

@@ -24,9 +24,6 @@ export default {
       default: () => {},
     },
   },
-  created() {
-    this.test();
-  },
   data() {
     return {
       open: true,
@@ -43,10 +40,6 @@ export default {
     },
     userInfo(user) {
       this.$router.push({ name: 'UserInfoView', params: { id: user } });
-    },
-    test() {
-      console.log(this.comment);
-      // console.log(this.children);
     },
   },
 };
