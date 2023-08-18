@@ -7,6 +7,8 @@ https://github.com/HackerNews/API
 
 #studying</br>
 <img src="https://img.shields.io/badge/Vue-#4FC08D?style=flat-square&logo=Vue.js&logoColor=white"/>
+<img src="https://img.shields.io/badge/Vue-4FC08D?style=flat&logo=Vue.js&logoColor=white"/>
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white"/>
 
 ### Project setup
 
