@@ -26,7 +26,7 @@ npm install
 ### Compiles and hot-reloads for development
 
 ```
-npm run serve (localhost:3000)
+npm run serve (localhost:8080)
 ```
 
 ### Compiles and minifies for production
