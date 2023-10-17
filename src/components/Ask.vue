@@ -7,7 +7,8 @@
             <span class="rank">{{ (page - 1) * 30 + index + 1 }}. </span>
             <a class="url" href="javasript:void(0)" @click="askItem(item.id)">{{ item.title }}</a>
             <p class="sup-item">
-              {{ item.points }} points by <a class="link-text" href="javacript:void(0)" @click="userInfo(item.user)">{{ item.user }}</a> {{ item.time_ago }} |
+              {{ item.points }} points by <a class="link-text" href="javacript:void(0)" @click="userInfo(item.user)">{{ item.user }}</a> {{ item.time_ago }}
+              <span v-show="item.comments_count !== 0">|</span>
               <span class="user" @click="askItem(item.id)" v-show="item.comments_count !== 0"> {{ item.comments_count }} comment</span>
             </p>
           </li>
